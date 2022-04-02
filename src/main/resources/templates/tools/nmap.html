@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{secLayout}">
+<head>
+<title>Tools</title>
+</head>
+<body>
+	<div layout:fragment="content">
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#targetSpec" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="targetSpec">
+				<h6 class="m-0 font-weight-bold text-primary">Target
+					Specification</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="targetSpec" style="">
+				<div class="card-body d-flex justify-content-center">
+					<table data-rows="9" data-cols="3" class="w-100"
+						style="margin-top: 0px !important; margin-bottom: 0px !important;">
+						<thead>
+							<tr class="">
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Switch</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" data-unit="px" style="line-height: 16px;">
+											Example</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Description</p>
+									</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="">
+								<td class="" style="padding: 5px;"></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan a single IP</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 192.168.2.1</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan specific IPs</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-254</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan a range</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap scanme.nmap.org</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan a domain</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.0/24</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan using CIDR notation</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-iL</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap -iL targets.txt</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan targets from a file</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-iR</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap -iR 100</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Scan 100 random hosts</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>--exclude</p>
+									</div></td>
+								<td class=" tve_brdr_none" style="padding: 5px;"><div
+										class="">
+										<p>nmap --exclude 192.168.1.1</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Exclude listed hosts</p>
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#scantech" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="scantech">
+				<h6 class="m-0 font-weight-bold text-primary">Scan Techniques</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="scantech" style="">
+				<div class="card-body d-flex justify-content-center">
+					<table data-rows="9" data-cols="3" class="w-100"
+						style="margin-top: 0px !important; margin-bottom: 0px !important;">
+						<thead>
+							<tr class="">
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Switch</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" data-unit="px" style="line-height: 16px;">
+											Example</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" style="margin-left: 0px !important;">Description</p>
+									</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sS</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sS</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>TCP SYN port scan (Default)</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sT</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sT</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p class="tve_p_left"
+											style="margin-left: 0px !important; margin-right: 0px !important;">
+											TCP connect port scan<br>(Default without root
+											privilege)
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sU</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sU</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>UDP port scan</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sA</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sA</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>TCP ACK port scan</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sW</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sW</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>TCP Window port scan</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sM</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sM</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>TCP Maimon port scan</p>
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#hostdisc" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="hostdisc">
+				<h6 class="m-0 font-weight-bold text-primary">Host Discovery</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="hostdisc" style="">
+				<div class="card-body d-flex justify-content-center">
+					<table data-rows="9" data-cols="3" class="w-100"
+						style="margin-top: 0px !important; margin-bottom: 0px !important;">
+						<thead>
+							<tr class="">
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Switch</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" data-unit="px" style="line-height: 16px;">
+											Example</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Description</p>
+									</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sL</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-3 -sL</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>No Scan. List targets only</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sn</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1/24 -sn</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p style="">
+											Disable port scanning. Host discovery only.<br>
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-Pn</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-5 -Pn</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p style="">
+											Disable host discovery. Port scan only.<br>
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-PS</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-5 -PS22-25,80</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>TCP SYN discovery on port x.</p>
+										<p>Port 80 by default</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-PA</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-5 -PA22-25,80</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>TCP ACK discovery on port x.</p>
+										<p>Port 80 by default</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-PU</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-5 -PU53</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>UDP discovery on port x.</p>
+										<p>Port 40125 by default</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-PR</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1-1/24 -PR</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>ARP discovery on local network</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-n</p>
+									</div></td>
+								<td class=" tve_brdr_none" style="padding: 5px;"><div
+										class="">
+										<p>nmap 192.168.1.1 -n</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Never do DNS resolution</p>
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#portspec" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="portspec">
+				<h6 class="m-0 font-weight-bold text-primary">Port
+					Specification</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="portspec" style="">
+				<div class="card-body d-flex justify-content-center">
+					<table data-rows="10" data-cols="3" class="w-100"
+						style="margin-top: 0px !important; margin-bottom: 0px !important;">
+						<thead>
+							<tr class="">
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Switch</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" data-unit="px" style="line-height: 16px;">
+											Example</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Description</p>
+									</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -p 21</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Port scan for port x</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -p 21-100</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Port range</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -p U:53,T:21-25,80</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Port scan multiple TCP and UDP ports</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p-</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -p-</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Port scan all ports</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -p http,https</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Port scan from service name</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-F</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -F</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Fast port scan (100 ports)</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>--top-ports</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 --top-ports 2000</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Port scan the top x ports</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p-65535</p>
+									</div></td>
+								<td
+									class="tve_table_cell tve_empty_dropzone tve_align_left tve_brdr_none tve_valign_top"
+									style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -p-65535</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>
+											Leaving off initial port in range <br>makes the scan
+											start at port 1
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-p0-</p>
+									</div></td>
+								<td
+									class="tve_table_cell tve_empty_dropzone tve_align_left tve_brdr_none tve_valign_top"
+									style="padding: 5px;" rowspan="1" colspan="1"><div
+										class="">
+										<p>nmap 192.168.1.1 -p0-</p>
+									</div></td>
+								<td class="" style="padding: 5px;" rowspan="1" colspan="1"><div
+										class="">
+										<p>Leaving off end port in range</p>
+										<p>makes the scan go through to port 65535</p>
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#svdetect" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="svdetect">
+				<h6 class="m-0 font-weight-bold text-primary">Service and
+					Version Detection</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="svdetect" style="">
+				<div class="card-body d-flex justify-content-center">
+					<table data-rows="10" data-cols="3" class="w-100"
+						style="margin-top: 0px !important; margin-bottom: 0px !important;">
+						<thead>
+							<tr class="">
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Switch</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" data-unit="px" style="line-height: 16px;">
+											Example</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Description</p>
+									</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sV</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sV</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p style="">Attempts to determine the version of the
+											service running on port</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sV --version-intensity</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sV --version-intensity 8</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Intensity level 0 to 9. Higher number increases
+											possibility of correctness</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sV --version-light</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sV --version-light</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Enable light mode. Lower possibility of correctness.
+											Faster</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-sV --version-all</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -sV --version-all</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Enable intensity level 9. Higher possibility of
+											correctness. Slower</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-A</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -A</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Enables OS detection, version detection, script
+											scanning, and traceroute</p>
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#osdetect" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="osdetect">
+				<h6 class="m-0 font-weight-bold text-primary">OS Detection</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="osdetect" style="">
+				<div class="card-body d-flex justify-content-center">
+					<table data-rows="10" data-cols="3" class="w-100"
+						style="margin-top: 0px !important; margin-bottom: 0px !important;">
+						<thead>
+							<tr class="">
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="">Switch</p>
+									</div></th>
+								<th class="" style="padding: 5px;"><div class="">
+										<p class="" data-unit="px" style="line-height: 16px;">
+											Example</p>
+									</div></th>
+								<th class="" style="padding: 5px; width: 250px;"><div
+										class="">
+										<p class="">Description</p>
+									</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-O</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -O</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p style="margin-right: 10px !important;">
+											Remote OS detection using TCP/IP <br>stack
+											fingerprinting
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px; width: 89px;"><div
+										class="">
+										<p>-O --osscan-limit</p>
+									</div></td>
+								<td class="" style="padding: 5px; width: 170px;"><div
+										class="">
+										<p>nmap 192.168.1.1 -O --osscan-limit</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>
+											If at least one open and one closed <br>TCP port are not
+											found it will not try <br>OS detection against host
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-O --osscan-guess</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -O --osscan-guess</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Makes Nmap guess more aggressively</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-O --max-os-tries</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -O --max-os-tries 1</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>
+											Set the maximum number x of OS <br>detection tries
+											against a target
+										</p>
+									</div></td>
+							</tr>
+							<tr class="">
+								<td class="" style="padding: 5px;"><div class="">
+										<p>-A</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>nmap 192.168.1.1 -A</p>
+									</div></td>
+								<td class="" style="padding: 5px;"><div class="">
+										<p>Enables OS detection, version detection, script
+											scanning, and traceroute</p>
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#tipe" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="tipe">
+				<h6 class="m-0 font-weight-bold text-primary">Timing and
+					Performance</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="tipe" style="">
+				<div class="card-body d-flex justify-content-center">
+					<div class="container">
+						<table data-rows="8" data-cols="3" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p class="">Switch</p>
+										</div></th>
+									<th class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p class="" data-unit="px" style="line-height: 16px;">
+												Example</p>
+										</div></th>
+									<th class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p class="">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>-T0</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T0</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p style="margin-right: 10px !important;">
+												Paranoid (0) Intrusion Detection <br>System evasion
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>-T1</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T1</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>
+												Sneaky (1) Intrusion Detection System <br>evasion
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>-T2</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T2</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>
+												Polite (2) slows down the scan to use <br>less
+												bandwidth and use less target <br>machine resources
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>-T3</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T3</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>Normal (3) which is default speed</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>-T4</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T4</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>
+												Aggressive (4) speeds scans; assumes <br>you are on a
+												reasonably fast and <br>reliable network
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>-T5</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T5</p>
+										</div></td>
+									<td class="" style="padding: 5px; border-width: 0px;"><div
+											class="">
+											<p>
+												Insane (5) speeds scan; assumes you <br>are on an
+												extraordinarily fast network
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class=" tve_brdr_solid"
+										style="padding: 5px; border-width: 0px; height: 26px; width: 79px;"></td>
+									<td class="" style="padding: 5px; border-width: 0px;"></td>
+									<td class=" tve_brdr_none"
+										style="padding: 5px; border-width: 0px;"></td>
+								</tr>
+							</tbody>
+						</table>
+						</br>
+						<table data-rows="9" data-cols="3" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; width: 250px;"><div
+											class="">
+											<p class="">Switch</p>
+										</div></th>
+									<th class="" style="padding: 5px;"><div class="">
+											<p class="" data-unit="px"
+												style="line-height: 16px; margin-left: 0px !important;">
+												Example input</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 220px;"><div
+											class="">
+											<p class="" style="margin-left: 0px !important;">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--host-timeout&nbsp;&lt;time&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p
+												style="margin-left: 0px !important; padding-left: 0px !important;">
+												1s; 4m; 2h</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p style="margin-right: 10px !important;">Give up on
+												target after this long</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>
+												--min-rtt-timeout/max-rtt-timeout/initial-rtt-timeout&nbsp;&lt;time&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">1s; 4m; 2h</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Specifies probe round trip time</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>
+												--min-hostgroup/max-hostgroup&nbsp;&lt;size&lt;size&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">50; 1024</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p>
+												Parallel host scan group <br>sizes
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>
+												--min-parallelism/max-parallelism&nbsp;&lt;numprobes&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">10; 1</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Probe parallelization</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--scan-delay/--max-scan-delay&nbsp;&lt;time&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px; width: 92px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">20ms; 2s; 4m; 5h</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Adjust delay between probes</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--max-retries &lt;tries&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">3</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>
+												Specify the maximum number <br>of port scan probe
+												retransmissions
+											</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--min-rate&nbsp;&lt;number&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">100</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Send packets no slower than&nbsp;&lt;numberr&gt; per
+												second</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--max-rate &lt;number&gt;</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">100</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="">Send packets no faster
+												than&nbsp;&lt;number&gt; per second</p>
+										</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#nsescr" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="nsescr">
+				<h6 class="m-0 font-weight-bold text-primary">NSE Scripts</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="nsescr" style="">
+				<div class="card-body d-flex justify-content-center">
+					<div class="container">
+						<table data-rows="8" data-cols="3" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; width: 100px;"><div
+											class="">
+											<p class="">Switch</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 235px;"><div
+											class="">
+											<p class="" data-unit="px"
+												style="line-height: 16px; margin-left: 0px !important;">
+												Example</p>
+										</div></th>
+									<th class="" style="padding: 5px;"><div
+											class="">
+											<p class="" style="margin-left: 0px !important;">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-sC</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p
+												style="margin-left: 0px !important; padding-left: 0px !important;">
+												nmap 192.168.1.1 -sC</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p style="margin-right: 10px !important;">Scan with
+												default NSE scripts. Considered useful for discovery and
+												safe</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--script default</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												--script default</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="">Scan with default NSE scripts. Considered
+												useful for discovery and safe</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--script</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												--script=banner</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p>Scan with a single script. Example banner</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--script</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												--script=http*</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Scan with a wildcard. Example http</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--script</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												--script=http,banner</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Scan with two scripts. Example http and banner</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--script</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												--script "not intrusive"</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Scan default, but remove intrusive scripts</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--script-args</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px;">nmap --script snmp-sysdescr
+												--script-args snmpcommunity=admin 192.168.1.1</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>NSE script with arguments</p>
+										</div></td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>Useful NSE Script Examples</h4>
+						<table data-rows="8" data-cols="2" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; width: 250px;"><div
+											class="">
+											<p class="">Command</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 236px;"><div
+											class="">
+											<p class="" style="margin-left: 0px !important;">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -Pn --script=http-sitemap-generator
+												scanme.nmap.org</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-right: 10px !important;">http site map
+												generator</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -n -Pn -p 80 --open -sV -vvv --script
+												banner,http-title -iR 1000</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Fast search for random web servers</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -Pn --script=dns-brute domain.com</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p>Brute forces DNS hostnames guessing subdomains</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -n -Pn -vv -O -sV --script
+												smb-enum*,smb-ls,smb-mbenum,smb-os-discovery,smb-s*,smb-vuln*,smbv2*
+												-vv 192.168.1.1</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Safe SMB scripts to run</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap --script whois* domain.com</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Whois query</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -p80 --script http-unsafe-output-escaping
+												scanme.nmap.org</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Detect cross site scripting vulnerabilities</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -p80 --script http-sql-injection scanme.nmap.org</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Check for SQL injections</p>
+										</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#evasion" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="evasion">
+				<h6 class="m-0 font-weight-bold text-primary">Firewall / IDS
+					Evasion and Spoofing</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="evasion" style="">
+				<div class="card-body d-flex justify-content-center">
+					<div class="container">
+						<table data-rows="9" data-cols="3" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; width: 100px;"><div
+											class="">
+											<p class="">Switch</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 248px;"><div
+											class="">
+											<p class="" data-unit="px"
+												style="line-height: 16px; margin-left: 0px !important;">
+												Example</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 240px;"><div
+											class="">
+											<p class="" style="margin-left: 0px !important;">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-f</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p
+												style="margin-left: 0px !important; padding-left: 0px !important;">
+												nmap 192.168.1.1 -f</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p style="margin-right: 10px !important;">Requested scan
+												(including ping scans) use tiny fragmented IP packets.
+												Harder for packet filters</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--mtu</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												--mtu 32</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Set your own offset size</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-D</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">
+												nmap -D 192.168.1.101,192.168.1.102,<br>192.168.1.103,192.168.1.23
+												192.168.1.1
+											</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Send scans from spoofed IPs</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-D</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap -D
+												decoy-ip1,decoy-ip2,your-own-ip,decoy-ip3,decoy-ip4
+												remote-host-ip</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Above example explained</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-S</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px;">nmap -S www.microsoft.com
+												www.facebook.com</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="">Scan Facebook from Microsoft (-e eth0 -Pn may
+												be required)</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-g</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap -g 53
+												192.168.1.1</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Use given source port number</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--proxies</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap --proxies
+												http://192.168.1.1:8080, http://192.168.1.2:8080 192.168.1.1</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Relay connections through HTTP/SOCKS4 proxies</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--data-length</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap
+												--data-length 200 192.168.1.1</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Appends random data to sent packets</p>
+										</div></td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>Example IDS Evasion command</h4>
+						<p>nmap -f -t 0 -n -Pn --data-length 200 -D
+							192.168.1.101,192.168.1.102,192.168.1.103,192.168.1.23
+							192.168.1.1</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card shadow mb-2">
+			<!-- Card Header - Accordion -->
+			<a href="#noutput" class="d-block card-header collapsed py-3"
+				data-toggle="collapse" data-bs-toggle="collapse" role="button"
+				aria-expanded="false" aria-controls="noutput">
+				<h6 class="m-0 font-weight-bold text-primary">Output</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse" id="noutput" style="">
+				<div class="card-body d-flex justify-content-center">
+					<div class="container">
+						<table data-rows="14" data-cols="3" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; width: 100px;"><div
+											class="">
+											<p class="">Switch</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 235px;"><div
+											class="">
+											<p class="" data-unit="px"
+												style="line-height: 16px; margin-left: 0px !important;">
+												Example</p>
+										</div></th>
+									<th class="" style="padding: 5px;"><div
+											class="">
+											<p class="" style="margin-left: 0px !important;">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-oN</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p
+												style="margin-left: 0px !important; padding-left: 0px !important;">
+												nmap 192.168.1.1 -oN normal.file</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p style="margin-right: 10px !important;">Normal output
+												to the file normal.file</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-oX</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												-oX xml.file</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>XML output to the file xml.file</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-oG</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												-oG grep.file</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div class="">
+											<p>Grepable output to the file grep.file</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-oA</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px;">nmap 192.168.1.1 -oA results</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Output in the three major formats at once</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-oG -</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												-oG -</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Grepable output to screen. -oN -, -oX - also usable</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--append-output</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												-oN file.file --append-output</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Append a scan to a previous scan file</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-v</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-left: 0px !important;">nmap 192.168.1.1
+												-v</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Increase the verbosity level (use -vv or more for
+												greater effect)</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>-d</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -d</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Increase debugging level (use -dd or more for greater
+												effect)</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--reason</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap 192.168.1.1 --reason</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Display the reason a port is in a particular state,
+												same output as -vv</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--open</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap 192.168.1.1 --open</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Only show open (or possibly open) ports</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--packet-trace</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap 192.168.1.1 -T4 --packet-trace</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Show all packets sent and received</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--iflist</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap --iflist</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Shows the host interfaces and routes</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>--resume</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap --resume results.file</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Resume a scan</p>
+										</div></td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>Helpful Nmap Output examples</h4>
+						<table data-rows="7" data-cols="2" class="w-100"
+							style="margin-top: 0px !important; margin-bottom: 0px !important;">
+							<thead>
+								<tr class="">
+									<th class="" style="padding: 5px; width: 310px;"><div
+											class="">
+											<p class="">Command</p>
+										</div></th>
+									<th class="" style="padding: 5px; width: 240px;"><div
+											class="">
+											<p class="" style="margin-left: 0px !important;">Description</p>
+										</div></th>
+								</tr>
+							</thead>
+							<tbody class="tve_empty_dropzone">
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -p80 -sV -oG - --open 192.168.1.1/24 | grep open</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="margin-right: 10px !important;">Scan for web
+												servers and grep to show which IPs are running web servers</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -iR 10 -n -oX out.xml | grep "Nmap" | cut -d " "
+												-f5 &gt; live-hosts.txt</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Generate a list of the IPs of live hosts</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>nmap -iR 10 -n -oX out2.xml | grep "Nmap" | cut -d "
+												" -f5 &gt;&gt; live-hosts.txt</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Append IP to the list of live hosts</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>ndiff scanl.xml scan2.xml</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Compare output from nmap using the ndif</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>xsltproc nmap.xml -o nmap.html</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>Convert nmap xml files to html files</p>
+										</div></td>
+								</tr>
+								<tr class="">
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p>grep " open " results.nmap | sed -r 's/ +/ /g' | sort
+												| uniq -c | sort -rn | less</p>
+										</div></td>
+									<td class="" style="padding: 5px;"><div
+											class="">
+											<p style="">Reverse sorted list of how often ports turn
+												up</p>
+										</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>

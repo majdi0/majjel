@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{secLayout}">
+<head>
+<title>Google</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="row">
+		<div class="col">
+		<h1>Examples List :</h1>
+		</div>
+		<div class="col">
+		<a href="/pdf/GoogleHackingCheatSheet.pdf" target="_blank"
+			class="btn btn-success btn-icon-split"> <span
+			class="icon text-white-50"> <i class="fas fa-check"></i>
+		</span> <span class="text">Check PDF cheat sheet</span>
+		</a>
+		</div>
+		
+		</div>
+		<p>
+filetype:config inurl:web.config inurl:ftp</br>
+ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | intext:"budget approved") inurl:confidential</br>
+ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | intext:”budget approved”) inurl:confidential</br>
+ext:inc "pwd=" "UID="</br>
+ext:ini intext:env.ini</br>
+ext:ini Version=... password</br>
+ext:ini Version=4.0.0.4 password</br>
+ext:ini eudora.ini</br>
+ext:ini intext:env.ini</br>
+ext:log "Software: Microsoft Internet Information Services _._"</br>
+ext:log "Software: Microsoft Internet Information</br>
+ext:log "Software: Microsoft Internet Information Services _._"</br>
+ext:log \"Software: Microsoft Internet Information Services _._\"</br>
+ext:mdb inurl:_.mdb inurl:fpdb shop.mdb</br>
+ext:mdb inurl:_.mdb inurl:fpdb shop.mdb</br>
+ext:mdb inurl:_.mdb inurl:fpdb shop.mdb</br>
+filetype:SWF SWF</br>
+filetype:TXT TXT</br>
+filetype:XLS XLS</br>
+filetype:asp DBQ=" _ Server.MapPath("_.mdb")</br>
+filetype:asp "Custom Error Message" Category Source</br>
+filetype:asp + "[ODBC SQL"</br>
+filetype:asp DBQ=" _ Server.MapPath("_.mdb")</br>
+filetype:asp DBQ=\" _ Server.MapPath(\"_.mdb\")</br>
+filetype:asp “Custom Error Message” Category Source</br>
+filetype:bak createobject sa</br>
+filetype:bak inurl:"htaccess|passwd|shadow|htusers"</br>
+filetype:bak inurl:\"htaccess|passwd|shadow|htusers\"</br>
+filetype:conf inurl:firewall -intitle:cvs</br>
+filetype:conf inurl:proftpd. PROFTP FTP server configuration file reveals</br>
+filetype:dat "password.dat</br>
+filetype:dat \"password.dat\"</br>
+filetype:eml eml +intext:"Subject" +intext:"From" +intext:"To"</br>
+filetype:eml eml +intext:\"Subject\" +intext:\"From\" +intext:\"To\"</br>
+filetype:eml eml +intext:”Subject” +intext:”From” +intext:”To”</br>
+filetype:inc dbconn</br>
+filetype:inc intext:mysql*connect</br>
+filetype:inc mysql_connect OR mysql_pconnect</br>
+filetype:log inurl:"password.log"</br>
+filetype:log username putty PUTTY SSH client logs can reveal usernames</br>
+filetype:log “PHP Parse error” | “PHP Warning” | “PHP Error”</br>
+filetype:mdb inurl:users.mdb</br>
+filetype:ora ora</br>
+filetype:ora tnsnames</br>
+filetype:pass pass intext:userid</br>
+filetype:pdf "Assessment Report" nessus</br>
+filetype:pem intext:private</br>
+filetype:properties inurl:db intext:password</br>
+filetype:pst inurl:"outlook.pst"</br>
+filetype:pst pst -from -to -date</br>
+filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"</br>
+filetype:reg reg +intext:\"defaultusername\" +intext:\"defaultpassword\"</br>
+filetype:reg reg +intext:â? WINVNC3â?</br>
+filetype:reg reg +intext:”defaultusername” +intext:”defaultpassword”</br>
+filetype:reg reg HKEY* Windows Registry exports can reveal</br>
+filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS</br>
+filetype:sql "insert into" (pass|passwd|password)</br>
+filetype:sql ("values _ MD5" | "values _ password" | "values _ encrypt")</br>
+filetype:sql (\"passwd values\" | \"password values\" | \"pass values\" )</br>
+filetype:sql (\"values _ MD\" | \"values _ password\" | \"values _ encrypt\")</br>
+filetype:sql +"IDENTIFIED BY" -cvs</br>
+filetype:sql password</br>
+filetype:sql password</br>
+filetype:sql “insert into” (pass|passwd|password)</br>
+filetype:url +inurl:"ftp://" +inurl:";@"</br>
+filetype:url +inurl:\"ftp://\" +inurl:\";@\"</br>
+filetype:url +inurl:”ftp://” +inurl:”;@”</br>
+filetype:xls inurl:"email.xls"</br>
+filetype:xls username password email</br>
+index of: intext:Gallery in Configuration mode</br>
+index.of passlist</br>
+index.of perform.ini mIRC IRC ini file can list IRC usernames and</br>
+index.of.dcim</br>
+index.of.password</br>
+intext:" -FrontPage-" ext:pwd inurl:(service | authors | administrators | users)</br>
+intext:""BiTBOARD v2.0" BiTSHiFTERS Bulletin Board"</br>
+intext:"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" inurl:service.pwd</br>
+intext:"#mysql dump" filetype:sql</br>
+intext:"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3</br>
+intext:"A syntax error has occurred" filetype:ihtml</br>
+intext:"ASP.NET_SessionId" "data source="</br>
+intext:"About Mac OS Personal Web Sharing"</br>
+intext:"An illegal character has been found in the statement" -"previous message"</br>
+intext:"AutoCreate=TRUE password=_"</br>
+intext:"Can't connect to local" intitle:warning</br>
+intext:"Certificate Practice Statement" filetype:PDF | DOC</br>
+intext:"Certificate Practice Statement" inurl:(PDF | DOC)</br>
+intext:"Copyright (c) Tektronix, Inc." "printer status"</br>
+intext:"Copyright © Tektronix, Inc." "printer status"</br>
+intext:"Emergisoft web applications are a part of our"</br>
+intext:"Error Diagnostic Information" intitle:"Error Occurred While"</br>
+intext:"Error Message : Error loading required libraries."</br>
+intext:"Establishing a secure Integrated Lights Out session with" OR intitle:"Data Frame - Browser not HTTP 1.1 compatible" OR intitle:"HP Integrated Lights-</br>
+intext:"Fatal error: Call to undefined function" -reply -the -next</br>
+intext:"Fill out the form below completely to change your password and user name. If new username is left blank, your old one will be assumed." -edu</br>
+intext:"Generated by phpSystem"</br>
+intext:"Generated by phpSystem"</br>
+intext:"Host Vulnerability Summary Report"</br>
+intext:"HostingAccelerator" intitle:"login" +"Username" -"news" -demo</br>
+intext:"IMail Server Web Messaging" intitle:login</br>
+intext:"Incorrect syntax near"</br>
+intext:"Index of" /"chat/logs"</br>
+intext:"Index of /network" "last modified"</br>
+intext:"Index of /" +.htaccess</br>
+intext:"Index of /" +passwd</br>
+intext:"Index of /" +password.txt</br>
+intext:"Index of /admin"</br>
+intext:"Index of /backup"</br>
+intext:"Index of /mail"</br>
+intext:"Index of /password"</br>
+intext:"Microsoft (R) Windows _ (TM) Version _ DrWtsn32 Copyright (C)" ext:log</br>
+intext:"Microsoft CRM : Unsupported Browser Version"</br>
+intext:"Microsoft ® Windows _ ™ Version _ DrWtsn32 Copyright ©" ext:log</br>
+intext:"Network Host Assessment Report" "Internet Scanner"</br>
+intext:"Network Vulnerability Assessment Report"</br>
+intext:"Network Vulnerability Assessment Report"</br>
+intext:"Network Vulnerability Assessment Report" 本文来自 pc007.com</br>
+intext:"SQL Server Driver][SQL Server]Line 1: Incorrect syntax near"</br>
+intext:"Thank you for your order" +receipt</br>
+intext:"Thank you for your order" +receipt</br>
+intext:"Thank you for your purchase" +download</br>
+intext:"The following report contains confidential information" vulnerability -search</br>
+intext:"phpMyAdmin MySQL-Dump" "INSERT INTO" -"the"</br>
+intext:"phpMyAdmin MySQL-Dump" filetype:txt</br>
+intext:"phpMyAdmin" "running on" inurl:"main.php"</br>
+intextpassword | passcode) intextusername | userid | user) filetype:csv</br>
+intextpassword | passcode) intextusername | userid | user) filetype:csv</br>
+intitle:"index of" +myd size</br>
+intitle:"index of" etc/shadow</br>
+intitle:"index of" htpasswd</br>
+intitle:"index of" intext:connect.inc</br>
+intitle:"index of" intext:globals.inc</br>
+intitle:"index of" master.passwd</br>
+intitle:"index of" master.passwd 007 电脑资讯</br>
+intitle:"index of" members OR accounts</br>
+intitle:"index of" mysql.conf OR mysql_config</br>
+intitle:"index of" passwd</br>
+intitle:"index of" people.lst</br>
+intitle:"index of" pwd.db</br>
+intitle:"index of" spwd</br>
+intitle:"index of" user_carts OR user_cart</br>
+intitle:"index.of \*" admin news.asp configview.asp</br>
+intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com</br>
+intitle:(“TrackerCam Live Video”)|(“TrackerCam Application Login”)|(“Trackercam Remote”) -trackercam.com</br>
+inurl:admin inurl:userlist Generic userlist files</br>
+"'dsn: mysql:host=localhost;dbname=" ext:yml | ext:txt "password:"</br>
+"* Authentication Unique Keys and Salts" ext:txt | ext:log</br>
+"-- Dumped from database version" + "-- Dumped by pg_dump version" ext:txt | ext:sql | ext:env | ext:log</br>
+"-- Dumping data for table `admin`" | "-- INSERT INTO `admin`" "VALUES" ext:sql | ext:txt | ext:log | ext:env</br>
+"-- Server version" "-- MySQL Administrator dump 1.4" ext:sql</br>
+"DefaultPassword" ext:reg "[HKEY_LOCAL_MACHINESOFTWAREMicrosoftWindows NTCurrentVersionWinlogon]"</br>
+"Powered by vBulletin(R) Version 5.6.3"</br>
+"System" + "Toner" + "Input Tray" + "Output Tray" inurl:cgi</br>
+"The SQL command completed successfully." ext:txt | ext:log</br>
+"change the Administrator Password." intitle:"HP LaserJet" -pdf</br>
+"define('DB_USER'," + "define('DB_PASSWORD'," ext:txt</br>
+"define('SECURE_AUTH_KEY'" + "define('LOGGED_IN_KEY'" + "define('NONCE_KEY'" ext:txt | ext:cfg | ext:env | ext:ini</br>
+"index of" "/home/000~ROOT~000/etc"</br>
+"index of" inurl:database ext:sql | xls | xml | json | csv</br>
+"keystorePass=" ext:xml | ext:txt -git -gitlab</br>
+"mailer_password:" + "mailer_host:" + "mailer_user:" + "secret:" ext:yml</br>
+"putty.log" ext:log | ext:cfg | ext:txt | ext:sql | ext:env</br>
+"secret_key_base:" ext:exs | ext:txt | ext:env | ext:cfg</br>
+/etc/certs + "index of /" */*</br>
+/etc/config + "index of /" /</br>
+AXIS Camera exploit</br>
+Index of /_vti_pvt +"*.pwd"</br>
+Server: Mida eFramework</br>
+allintext:"Copperfasten Technologies" "Login"</br>
+allintext:"Index Of" "cookies.txt"</br>
+allintext:@gmail.com filetype:log</br>
+ext:php intitle:phpinfo "published by the PHP Group"</br>
+ext:sql | ext:txt intext:"-- phpMyAdmin SQL Dump --" + intext:"admin"</br>
+ext:txt | ext:log | ext:cfg "Building configuration..."</br>
+ext:txt | ext:log | ext:cfg | ext:yml "administrator:500:"</br>
+ext:yml | ext:txt | ext:env "Database Connection Information Database server ="</br>
+intext:"Connection" AND "Network name" AND " Cisco Meraki cloud" AND "Security Appliance details"</br>
+intext:"Healthy" + "Product model" + " Client IP" + "Ethernet"</br>
+intext:"Incom CMS 2.0"</br>
+intext:"SonarQube" + "by SonarSource SA." + "LGPL v3"</br>
+intext:"user name" intext:"orion core" -solarwinds.com</br>
+intext:construct('mysql:host</br>
+intitle:"Agent web client: Phone Login"</br>
+intitle:"Exchange Log In"</br>
+intitle:"Humatrix 8"</br>
+intitle:"Insurance Admin Login" | "(c) Copyright 2020 Cityline Websites. All Rights Reserved." | "http://www.citylinewebsites.com"</br>
+intitle:"NetCamSC*"</br>
+intitle:"NetCamSC*" | intitle:"NetCamXL*" inurl:index.html</br>
+intitle:"NetCamXL*"</br>
+intitle:"Please Login" "Use FTM Push"</br>
+intitle:"Powered by Pro Chat Rooms"</br>
+intitle:"Sphider Admin Login"</br>
+intitle:"Xenmobile Console Logon"</br>
+intitle:"index of" "*.cert.pem" | "*.key.pem"</br>
+intitle:"index of" "*Maildir/new"</br>
+intitle:"index of" "/.idea"</br>
+intitle:"index of" "/xampp/htdocs" | "C:/xampp/htdocs/"</br>
+intitle:"index of" "Clientaccesspolicy.xml"</br>
+intitle:"index of" "WebServers.xml"</br>
+intitle:"index of" "anaconda-ks.cfg" | "anaconda-ks-new.cfg"</br>
+intitle:"index of" "config.exs" | "dev.exs" | "test.exs" | "prod.secret.exs"</br>
+intitle:"index of" "credentials.xml" | "credentials.inc" | "credentials.txt"</br>
+intitle:"index of" "db.properties" | "db.properties.BAK"</br>
+intitle:"index of" "dump.sql"</br>
+intitle:"index of" "filezilla.xml"</br>
+intitle:"index of" "password.yml</br>
+intitle:"index of" "service-Account-Credentials.json" | "creds.json"</br>
+intitle:"index of" "sitemanager.xml" | "recentservers.xml"</br>
+intitle:"index of" intext:"apikey.txt</br>
+intitle:"index of" intext:"web.xml"</br>
+intitle:"index of" intext:credentials</br>
+intitle:"index of" inurl:admin/download</br>
+intitle:"irz" "router" intext:login gsm info -site:*.com -site:*.net</br>
+intitle:"web client: login"</br>
+intitle:("Index of" AND "wp-content/plugins/boldgrid-backup/=")</br>
+intitle:Login intext:HIKVISION inurl:login.asp?</br>
+intitle:index of .git/hooks/</br>
+USG60W|USG110|USG210|USG310|USG1100|USG1900|USG2200|"ZyWALL110"|"ZyWALL310"|"ZyWALL1100"|ATP100|ATP100W|ATP200|ATP500|ATP700|ATP800|VPN50|VPN100|VPN300|VPN000|"FLEX")</br>
+jdbc:mysql://localhost:3306/ + username + password ext:yml | ext:javascript -git -gitlab</br>
+jdbc:oracle://localhost: + username + password ext:yml | ext:java -git -gitlab</br>
+jdbc:postgresql://localhost: + username + password ext:yml | ext:java -git -gitlab</br>
+jdbc:sqlserver://localhost:1433 + username + password ext:yml | ext:java</br>
+site:*gov.* intitle:index.of db</br>
+site:checkin.*.* intitle:"login"</br>
+site:ftp.*.*.* "ComputerName=" + "[Unattended] UnattendMode"</br>
+site:gov ext:sql | ext:dbf | ext:mdb</br>
+site:password.*.* intitle:"login"</br>
+site:portal.*.* intitle:"login"</br>
+site:sftp.*.*/ intext:"login" intitle:"server login"</br>
+site:user.*.* intitle:"login"</br>
+ssh_host_dsa_key.pub + ssh_host_key + ssh_config = "index of / "
+		</p>
+		
+		
+	</div>
+</body>
+
+</html>
